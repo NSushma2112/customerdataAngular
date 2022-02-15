@@ -1,0 +1,15 @@
+<p>view works!</p>
+
+<div class="container mt-3">
+    <h2>{{result.customerFName}}</h2>
+    <p>Complete Data</p>
+    <div class="card" style="width:400px">
+      <img class="rounded-circle" src="https://www.w3schools.com/bootstrap5/img_avatar3.png" alt="Card image" style="width:100%">
+      <div class="card-body">
+        <h4 class="card-title">FirstName:&nbsp;&nbsp; {{result.firstName}}</h4>
+        <h4 class="card-title">LastName:&nbsp;&nbsp;{{result.lastName}}</h4>
+        <p class="card-text">Cuntry:&nbsp;&nbsp;{{result.cuntry}}</p>
+        <p class="card-text">CreatedDate:&nbsp;&nbsp;{{result.createdDate}}</p>
+        <button type="button" class="btn btn-primary" (click)="backtoView()">BackToView</button>
+      </div>
+    </div>

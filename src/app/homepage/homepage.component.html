@@ -1,0 +1,35 @@
+<div class="container mt-3">
+  <h2 class=" bg-secondary" style="text-align: center;">CUSTOMER LIST</h2>
+  <div class="text-end">
+  <button type="button" (click)="addcus()" class="btn btn-primary">ADD CUSTOMER</button>  
+</div>
+  <table class="table">
+    <thead>
+      <br>
+      <tr class="bg-black text-white">
+        <th>Customer_Id</th>
+        <th>FirstName</th>
+        <th>LastName</th>
+        <th>Cuntry</th>
+        <th>CreatedDate</th>
+        <th></th>
+        <th>Edit</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let s of result" class="table-warning">
+        <td>{{s.Customer_Id}}</td>
+        <td>{{s.FirstName}}</td>
+        <td>{{s.LastName }}</td>
+        <td>{{s.Cuntry}}</td>
+        <td>{{s.CreatedDate}}</td>
+        <td><button type="button" (click)="updatecus(s.Customer_Id)" class="btn btn-info">Edit</button></td>
+        <td><button type="button" (click)="deletecus(s.Customer_Id)" class="btn btn-danger">Delete</button></td>
+        <td><button type="button" (click)="viewcus(s.Customer_Id)" class="btn btn-success">View</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
